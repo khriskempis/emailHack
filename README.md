@@ -2,7 +2,7 @@
 
 <hr>
 
-<p>Ever wonder why you get all those spam emails? Your security might be up to date, but companies that you signed up for get hackedd all the time. Usually in those hacks, millions of users information gets stolen. And then all of a sudden your inbox is full of spam email. </p>
+<p>Ever wonder why you get all those spam emails? Your security might be up to date, but companies that you signed up for get hacked all the time. Usually in those hacks, millions of user information get stolen. And then all of a sudden your inbox is full of spam email. </p>
 
 <hr>
 
@@ -10,9 +10,13 @@
 
 <img src="img2/screenShot1.png">
 
-<p>enter your email and below you will find out if your email was ever compromised!</p>
+<p>Enter your email and below you will find out if your email was ever compromised!</p>
 
 <img src="img2/screenShot2.png">
+
+<hr>
+
+<p><em>Your email is never saved or used to send spam email.</em></p>
 
 <p>Technologies I used: </p>
 <ul>
