@@ -59,7 +59,7 @@ a {
 }
 
 .video-header-title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   animation: fadeInDown;
   animation-duration: 3s;
@@ -67,7 +67,7 @@ a {
 
 .video-header-paragraph {
   opacity: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-bottom: 3rem;
   animation: fadeIn;
   animation-delay: 1s;
@@ -116,7 +116,7 @@ a {
 .form {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin: 18rem 0 3rem;
 }
 
 .form label,
@@ -147,7 +147,7 @@ button {
 
 .hacked {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding: 1rem;
   color: #e62828;
   animation: hacked;
@@ -249,6 +249,25 @@ button {
 
   to {
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@media only screen and (min-width: 640px){
+
+  .video-header-title {
+    font-size: 3rem;
+  }
+
+  .video-header-paragraph {
+    font-size: 1.5rem;
+  }
+
+  .form {
+    margin-top: 2rem;
+  }
+
+  .hacked {
+    font-size: 2.5rem;
   }
 }
 
