@@ -11,7 +11,7 @@
 
 <body>
 
-<main>
+<main role="main">
   <div class="video-container">
     <header class="video-header">
       <div class="video-wrapper">
@@ -21,7 +21,7 @@
         </video>
       </div>
       <div class="video-header-overlay"></div>
-      <div class="video-header-content">
+      <div role="banner" class="video-header-content" >
         <h1 class="video-header-title">Has Your Email Been Pwned?</h1>
         <p class="video-header-paragraph">There are hundreds of data breaches every day! Has your email address been compromised in a data breach?</p>
         <a class="video-header-btn" id="try-btn">Find Out</a>
@@ -29,15 +29,16 @@
     </header>
   </div>
 
-  <section class="section-email" id="email-section">
+  <section role="region" class="section-email" id="email-section">
     <div class="email-container">
-      <form class="form">
+      <form role="form" class="form">
         <label>Enter Email</label>
         <input type="text" placeholder="example@mail.com" class="text-input" required>
         <button class="submit-button">Check Now!</button>
       </form>
     </div>
-    <div class="search-results"></div>
+    <section role="contentinfo" class="search-results" aria-live="assertive">
+    </section>
   </section>
 
 </main>
