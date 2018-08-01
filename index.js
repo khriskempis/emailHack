@@ -15,22 +15,26 @@ function showErr(err){
     generateErrorHtml();
   }}
 
+
+function generateErrorHtml() {
+  let errorString = `<div class="clear">Congrats!<br>Your email has not been pwned!<br>You're all good!</div>`;
+  $('.search-results').html(errorString);
+}
+
 function generateHtmlString(item){
-		let htmlString = `<div class="container">
-    <div role="contentinfo" class="content-info">
-      <h4><a href="${item.Domain}" target="_blank">${item.Name}</a></h4>
-      <p>${item.BreachDate}</p>
+		let htmlString = `<div role="contentinfo" class="content-info">
+      <h2 class="content-info-margin">Domain: <span>${item.Domain}</span></h2>
+      <p class="content-info-margin">Date of Breach: <span>${
+        item.BreachDate
+      }</span></p>
       <p>${item.Description}</p>
     </div>
-  </div>
-	`
+	`;
 	return htmlString
 }
 
 function displayEmailInfo(data){
-	let htmlString = `<div class="container hacked">
-      <h3 class="view-now">You've Been Hacked!!!</h3><p>Scroll Down</p>
-    </div>`
+	let htmlString = `<div class="hacked">Your email was part of a data breach!</div>`;
 	data.map(item => htmlString+= generateHtmlString(item))
 	$('.search-results').html(htmlString)
 }
@@ -52,3 +56,12 @@ function handleSubmit(){
 }
 
 $(handleSubmit())
+
+$('#try-btn').click(function() {
+  $('html, body').animate(
+    {
+      scrollTop: $('#email-section').offset().top,
+    },
+    1500,
+  );
+});
