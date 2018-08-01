@@ -16,7 +16,8 @@ body {
      url('./img/red-keyboard.jpg');
   background-attachment: fixed;
   background-size: cover;
-  height: 800px;
+  width: 100vw;
+  height: 100vh;
   position: relative;
 }
 
@@ -81,7 +82,8 @@ a {
   background-image: url('./img/matrix-laptop.jpeg');
   background-size: cover;
   background-attachment: scroll;
-  height: 800px;
+  height: 100vh;
+  width: 100vw;
   position: relative;
 }
 
