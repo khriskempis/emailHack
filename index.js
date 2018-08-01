@@ -5,14 +5,15 @@ const PWNED_ENDPOINT = "https://haveibeenpwned.com/api/v2/breachedaccount/"
 function getDataFromAPI(email, callback){
 	const emailEndpoint = PWNED_ENDPOINT + email;
 
-	$.getJSON(emailEndpoint, {}, callback)
+	$.getJSON(emailEndpoint, callback)
 		.fail(showErr)
 
 }
 
 function showErr(err){
-	console.log(err)
-}
+  if (err.statusText === 'error') {
+    generateErrorHtml();
+  }}
 
 function generateHtmlString(item){
 		let htmlString = `<div class="container">
