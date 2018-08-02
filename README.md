@@ -4,7 +4,7 @@
 
 <p>Ever wonder why you get all those spam emails? Your security might be up to date, but companies that you signed up for get hacked all the time. Usually in those hacks, millions of user information gets stolen. And then all of a sudden your inbox is full of spam email. </p>
 
-<p><a href="https://khriskempis.github.io/emailHack/">Click Here</a>to visit page</p>
+<p><a href="https://khriskempis.github.io/emailHack/" target="_blank">Click Here</a> to visit page</p>
 
 <p>This application uses an API offered by <a href="https://haveibeenpwned.com/">haveibeenpwned.com</a> which has information about data breaches for hundreds of websites.</p>
 
