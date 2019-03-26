@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>Data Breach</title>
+</head>
+
+<body>
+  <div class="video-container">
+    <header class="video-header">
+      <div class="video-wrapper">
+        <video poster="img/bg-video-poster.jpg" autoplay='true' loop="true">
+          <source src="videos/bg-video.mp4" type="video/mp4">
+          <source src="videos/bg-video.webm" type="video/webm">
+        </video>
+      </div>
+      <div class="video-header-overlay"></div>
+      <div class="video-header-content">
+        <h1 class="video-header-title">Has Your Email Been Pwned?</h1>
+        <p class="video-header-paragraph">There are hundreds of data breaches every day! Has your email address been compromised in a data breach?</p>
+        <a class="video-header-btn" id="try-btn">Find Out</a>
+      </div>
+    </header>
+  </div>
+
+  <section class="section-email" id="email-section">
+    <div class="email-container">
+      <form class="form">
+        <label>Enter Email</label>
+        <input type="text" placeholder="example@mail.com" class="text-input" required>
+        <button class="submit-button">Check Now!</button>
+      </form>
+    </div>
+    <div class="search-results"></div>
+  </section>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

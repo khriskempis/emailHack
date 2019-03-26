@@ -1,12 +1,26 @@
 
-const PWNED_ENDPOINT = "https://haveibeenpwned.com/api/v2/breachedaccount/"
+const PWNED_ENDPOINT = "https://haveibeenpwned.com/api/breachedaccount/"
 
 
 function getDataFromAPI(email, callback){
-	const emailEndpoint = PWNED_ENDPOINT + email;
+  const emailEndpoint = PWNED_ENDPOINT + email;
+  
+  $.ajax({
+    method: "GET",
+    dataType: "json",
+    url: emailEndpoint,
+    beforeSend: function(xhr){
+      xhr.setRequestHeader('api-version', '2')
+      xhr.setRequestHeader('User-Agent', 'Data-Breach');
+      xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    },
+    // headers: {"User-Agent": "Data-Breach"},
+    success: callback
+  })
+  .fail(showErr);
 
-	$.getJSON(emailEndpoint, callback)
-		.fail(showErr)
+	// $.getJSON(emailEndpoint, callback)
+	// 	.fail(showErr)
 
 }
 
