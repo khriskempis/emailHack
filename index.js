@@ -1,5 +1,5 @@
 
-const PWNED_ENDPOINT = "https://haveibeenpwned.com/api/breachedaccount/"
+const PWNED_ENDPOINT = "https://haveibeenpwned.com/api/v2/breachedaccount/"
 
 
 function getDataFromAPI(email, callback){
@@ -10,11 +10,9 @@ function getDataFromAPI(email, callback){
     dataType: "json",
     url: emailEndpoint,
     beforeSend: function(xhr){
-      xhr.setRequestHeader('api-version', '2')
-      xhr.setRequestHeader('User-Agent', 'Data-Breach');
+      xhr.setRequestHeader('User-Agent', 'application/javascript');
       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     },
-    // headers: {"User-Agent": "Data-Breach"},
     success: callback
   })
   .fail(showErr);
