@@ -9,10 +9,10 @@ function getDataFromAPI(email, callback){
     method: "GET",
     dataType: "json",
     url: emailEndpoint,
-    beforeSend: function(xhr){
-      xhr.setRequestHeader('User-Agent', 'application/javascript');
-      xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-    },
+    // beforeSend: function(xhr){
+    //   xhr.setRequestHeader('User-Agent', 'application/json');
+    //   xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    // },
     success: callback
   })
   .fail(showErr);
